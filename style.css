@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.banner img {
+    background-image: url(./images/banner\ 01.png);
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    display: block;
+
+}
+
+header {
+    background-color: black;
+
+    color: white;
+    padding: -1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: -1rem;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 70px;
+    margin-right: 20px;
+}
+
+.clock {
+    font-size: 1.2rem;
+}
+
+.cart {
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+}
+
+.carousel img {
+    width: 50%;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 85px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(232, 10, 10);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+}
+
+.cart-details {
+    margin-top: 2rem;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cart-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-details ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.cart-details ul li button {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.wats {
+    
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+
+
+
+}
+
+.inst{
+
+    position: fixed;
+    bottom: 30px;
+    border-radius: 50px;
+    left: 30px;
+    z-index: 9999;
+
+
+}
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+
+    .cart-details {
+        margin-left: 2rem;
+        margin-top: 0;
+        width: 300px;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart {
+        margin-top: 1rem;
+    }
+}
